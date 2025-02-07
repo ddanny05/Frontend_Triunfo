@@ -34,14 +34,12 @@ export function Login({
            body: JSON.stringify({ username, password }),
          });
 
-         if (!response.ok) {
+         if (response.ok) {
           const data= await response.json();
           localStorage.setItem("access_token", data.access); 
-
+          console.log( data);
          }
-         else {
-           setError("ingresaste mal la contraseña o usuario");
-         }
+         
          
        } catch (error) {
          setError("ocurrio un problemas al inciiar session");
