@@ -1,22 +1,19 @@
 import { Tabla_socios } from '@/components/tabla_socios'
 import React from 'react'
-interface tipo {
-    data: string;  // JSON data string
-  
-}
-async function page(){
 
-    const respuesta = await fetch("http://127.0.0.1:8000/api/socios/")
-    const personas = await respuesta.json()
+async function datos () {
+  const respuesta = await fetch('http://127.0.0.1:8000/api/socios/')
+  const datos = await respuesta.json()
+  return datos
+}
+
+export default async function page () {
+  const socios = await datos()
   return (
     <div>
-        
-      <Tabla_socios data={personas} />
+      <Tabla_socios data={socios} />
     </div>
   )
 }
-
-export default page;
-
 
 

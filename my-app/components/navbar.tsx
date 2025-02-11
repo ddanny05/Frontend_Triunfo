@@ -71,8 +71,14 @@ export function Navbar() {
               
             </NavigationMenuItem >
             <NavigationMenuItem className="bg-gray-800 text-white p-2  hover:bg-white hover:text-gray-900">
-            <Link href="/movimientos" legacyBehavior passHref>
-                <NavigationMenuLink >Movimientos</NavigationMenuLink>
+            <Link href="/ingresos" legacyBehavior passHref>
+                <NavigationMenuLink >Ingresos</NavigationMenuLink>
+              </Link>
+              
+            </NavigationMenuItem>
+            <NavigationMenuItem className="bg-gray-800 text-white p-2  hover:bg-white hover:text-gray-900">
+            <Link href="/egresos" legacyBehavior passHref>
+                <NavigationMenuLink >Egresos</NavigationMenuLink>
               </Link>
               
             </NavigationMenuItem>

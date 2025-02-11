@@ -2,16 +2,16 @@ import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, Tabl
 
 interface tipos {
   cedula: string
-  props.personas: string
+  personas: string
   nombres: string
   apellidos: string
   direccion: string
   celular: string
   correo_electronico: string
   fecha_nacimiento: string
+ 
 }
-
-export function Tabla_socios(props:string) {
+export function Tabla_socios({data}: {data:tipos[]}) {
     
   return (
     <>
@@ -29,7 +29,7 @@ export function Tabla_socios(props:string) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {props.personas.map((persona:tipos) => (
+        {data.map((persona:tipos) => (
           <TableRow key={persona.cedula}>
             <TableCell>{persona.cedula}</TableCell>
             <TableCell>{persona.nombres}</TableCell>
